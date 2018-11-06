@@ -9,7 +9,17 @@ module.exports = {
 };
 
 async function selecionar() {
-    return db.func('Administracao.SelecionarCliente');
+
+    // throw {
+    //     httpCode: 409,
+    //     message: 'Dados informados inválidos'
+    // }
+
+    throw {
+        httpCode: 500,
+        message: 'Erro interno 2'
+    }
+    // return db.func('Administracao.SelecionarCliente');
 }
 
 async function selecionarPorId(params) {

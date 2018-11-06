@@ -9,9 +9,17 @@ module.exports = {
 };
 
 async function selecionar(req, res) {
-    let data = await repository.selecionar();
 
-    return res.finish({content: data});
+    try {
+        let data = await repository.selecionar();
+
+        return res.finish({content: data});
+    } catch (error) {
+        return res.finish({
+            httpCode: error.httpCode || 500,
+            error
+        })
+    }
 }
 
 async function selecionarPorId(req, res) {

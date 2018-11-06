@@ -2,6 +2,7 @@ let app = require('express')();
 let bodyParser = require('body-parser');
 let consign = require('consign')({verbose: false});
 require('./settings/db');
+require('./settings/error');
 
 app.use(bodyParser.json({limit: '30mb'}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));

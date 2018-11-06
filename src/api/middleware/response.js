@@ -1,3 +1,5 @@
+const Sentry = global.sentry;
+
 const messagePool = {
     200: 'OK',
     400: 'Requisição inválida',
@@ -45,6 +47,9 @@ function finish(res, result, next) {
         totalLinhas: (result.content && result.content.length > -1) ? (result.totalLinhas ? result.totalLinhas : (result.content[0] ? result.content[0].totalLinhas : 0)) : undefined,
         // internalError: !global.config.isProduction && result.httpCode === 500 ? res.description : undefined
     });
+
+    if (result.httpCode !== 200)
+        Sentry.captureException(result.error);
 
     next();
 }

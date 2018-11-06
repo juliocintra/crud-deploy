@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sentry/node": "^4.2.4",
     "body-parser": "^1.18.3",
     "consign": "^0.1.6",
     "express": "^4.16.4",
