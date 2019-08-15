@@ -11,7 +11,10 @@ module.exports = {
 async function selecionar(req, res) {
 
     try {
-        let data = await repository.selecionar();
+        // let data = await repository.selecionar();
+        let data = require('./user-moc');
+
+        data = data.filter(item => item.nome == 'Julio Cesar');
 
         return res.finish({content: data});
     } catch (error) {
@@ -43,6 +46,8 @@ async function inserir(req, res) {
     try {
 
         let data = await repository.inserir(params);
+
+
 
         return res.finish(data);
     } catch (error) {

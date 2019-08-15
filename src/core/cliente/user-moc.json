@@ -1,0 +1,22 @@
+[
+  {
+    "cpf": "370.000.111-48",
+    "nome": "Julio Cesar",
+    "enderecos": [
+      {
+        "logradouro": "Rua teset",
+        "numero": "1010",
+        "cidade": "Franca",
+        "estado": "SP",
+        "cep": "14.402-111"
+      }
+    ],
+    "telefones": [
+      {
+        "ddd": "16",
+        "numero": "9999-9999",
+        "ramal": "12"
+      }
+    ]
+  }
+]
