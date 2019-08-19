@@ -29,10 +29,7 @@ let transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com',
     port: 587,
     secure: false, // true for 465, false for other ports
-    auth: {
-        user: 'julinn_cesar@hotmail.com', // generated ethereal user
-        pass: 'julio1010' // generated ethereal password
-    }
+
 });
 
 app.get('/teste', async (req, res) => {
